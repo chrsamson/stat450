@@ -9,22 +9,26 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## About Me
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+I'm a 4th year STAT major currently taking STAT 443 and STAT 450, hopefully completing my degree this semester. I did two co-op terms in 2016, one at a children's hospital in Montreal and one at an online lending company here in Downtown Vancouver. My co-op at the children's hospital was a similar style project to STAT 450, in that I had to work on my own to explore and analyze data given to me by 'a client' (my boss) and I really look forward to doing something similar here.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## My Favorite Equation
 
-```{r cars}
-summary(cars)
+My favorite equation is the quadratic formula.
+
+$$\frac{-b \pm \sqrt{b^2 -4ac}}{2a}$$
+It's my favorite because it's not exactly a trivial or simple equation, but it can help you easily find the solutions of a polynomial.
+
+## My Favorite Dataset
+
+My favorite dataset is the 'airquality' dataset in R. It contains daily air quality measurements in New York from May to September of 1973.
+
+```{r airquality, echo=TRUE}
+head(airquality, n=5)
+temps <- ts(airquality$Temp, start = c(1973,121), frequency = 365)
+ts.plot(temps, main="Max Temperature at Laguardia Airport in NYC from 5/1/73 to 9/30/73", ylab="Degrees (F)")
 ```
 
-## Including Plots
 
-You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
